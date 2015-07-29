@@ -35,18 +35,16 @@ class Template {
      */
     public function render()
     {
-        //headers
-        header("Content-type:text/html; charset=utf-8");
-        
         //переменные шаблона
         extract($this->variables);
 
-        //если в папке представления нету header.phtml или footer.phtml, 
-        //то загружаем header и footer по умолчанию        
+        //если в папке views/controller/ нет header.phtml или footer.phtml, 
+        //то загружаем header.phtml и footer.phtml по умолчанию        
         $header_phtml = VIEWS_DIR . strtolower($this->_controller) . DIRECTORY_SEPARATOR . 'header.phtml';
         $footer_phtml = VIEWS_DIR . strtolower($this->_controller) . DIRECTORY_SEPARATOR . 'footer.phtml';
         $action_phtml = VIEWS_DIR . strtolower($this->_controller) . DIRECTORY_SEPARATOR . $this->_action . '.phtml';
 
+        $this->setHeader("html");
         file_exists($header_phtml) ? include $header_phtml : include DEFAULT_HEADER_PHTML;
         if (file_exists($action_phtml)) include $action_phtml;
         file_exists($footer_phtml) ? include $footer_phtml : include DEFAULT_FOOTER_PHTML;
@@ -55,6 +53,7 @@ class Template {
     public function setHeader($type = "text")
     {
         if ($type == "text") header("Content-Type:text/plain");
+        if ($type == "html") header("Content-type:text/html; charset=utf-8");
     }
 
     /**

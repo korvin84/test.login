@@ -24,11 +24,6 @@ class Application {
 
         return self::$instance;
     }
-    
-    private static function init()
-    {
-        self::getInstance();
-    }
 
     /**
      * Разбирает URL
@@ -52,16 +47,16 @@ class Application {
     private function dispatch()
     {
         list($controller, $action, $queryString) = $this->parseURL();
-        
+
         $controllerClass = ucwords($controller) . 'Controller';
-        $controllerName = ucwords($controller);
+        $controllerName  = ucwords($controller);
 
         $dispatch = new $controllerClass($controllerName, $action);
 
         if (method_exists($controllerClass, $action))
         {
             //call_user_func_array(array($dispatch, $action), $queryString);
-            $dispatch->$action($queryString);            
+            $dispatch->$action($queryString);
         }
         else
         {
@@ -72,7 +67,7 @@ class Application {
     }
 
     public static function run()
-    {        
+    {
         return Application::getInstance()->dispatch();
     }
 
