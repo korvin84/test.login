@@ -1,0 +1,25 @@
+<main>
+    <article>       
+        <table>
+            <?php foreach ($users as $user): ?>
+                <tr><td rowspan="9" class="avatar"><img src="<?= $user->getAvatar() ?>" alt="<?= $user->nick ?>_avatar" /></td></tr> 
+                <tr><td class="title">ID</td><td><?= $user->id ?></td></tr> 
+                <tr><td class="title">Ник</td><td><?= $user->nick ?></td></tr> 
+                <tr><td class="title">Ф.И.О.</td><td><?= $user->sname ?> <?= $user->fname ?> <?= $user->pname ?></td></tr> 
+                <tr><td class="title">Дата рождения</td><td><?= $user->dob ?></td></tr> 
+                <tr><td class="title">Место жительства</td><td><?= $user->country ?>, <?= $user->region ?>, <?= $user->city ?></td></tr> 
+                <tr><td class="title">Email</td><td><?= $user->email ?></td></tr> 
+                <tr><td class="title">Телефон</td><td><?= $user->tel ?></td></tr> 
+                <tr class="fotos"><td class="title">Фотографии</td>
+                    <td>
+                        <?php foreach ($user->getImages() as $data): ?>
+                            <a href="<?= $data['image'] ?>"><img src="<?= $data['preview'] ?>" alt="<?= $user->nick ?>_file" /></a>
+                        <?php endforeach; ?>
+                    </td></tr>                   
+
+            <?php endforeach; ?>
+
+        </table>
+
+    </article>
+</main>

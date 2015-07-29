@@ -1,0 +1,218 @@
+html,body,div,ul,ol,li,form,fieldset,input,p { 
+    margin:0;
+    padding:0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+
+body a {
+    text-decoration: none;
+    font-weight: bolder;
+    color: #bbc92a;
+}
+
+body a:hover {
+    text-decoration: underline;
+}
+
+header {
+    height: 110px;
+    background: #271604;
+}
+
+#logo {    
+    height: 100px;
+    width: 100px;
+    background: url("/images/logo-red.png") 5px center no-repeat;    
+    padding: 5px;  
+    float: left;
+}
+
+header h1 {
+    float: left;
+    padding-top: 10px;
+    color: #e4ffff;
+    margin-left: 50px;
+}
+
+header nav {  
+    float: right;
+    padding-top: 55px;
+}
+
+header nav a {
+    color: #ffffbf;
+    font-size: 12pt;
+    padding: 4px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+article {
+    min-height: 400px; 
+    padding: 10px 50px; 
+    background: #34261a;
+    color: #ffffbf;
+}
+
+aside {    
+    width: 326px;
+    float: right; 
+    padding: 10px;
+    width: 200px;  
+}
+
+aside h4 {    
+    color: #f03000;   
+}
+
+
+footer {
+    text-align: right;
+    font-size: smaller;
+    background: #271604;
+    padding: 20px;
+    color: #e4ffff;
+}
+
+footer a {
+    color: #ffffbf;
+}
+
+.clr{
+    clear: both;
+}
+
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+
+.form{  
+    box-sizing:border-box;
+    background:#271604;
+    width:910px;
+    margin:0 auto;
+    padding:10px 0 0 10px;
+}
+
+.form fieldset{
+    box-sizing:border-box;
+    border:0;
+    padding:0 35px;
+    width:450px;
+    float: left;
+    margin-bottom: 20px;
+}
+
+.form fieldset legend, .form label{
+    color: #ffffbf;
+    font-weight:bold; 
+    font-size: larger;
+    margin:10px 10px 10px 10px;
+}
+
+.form label {
+    display: block;
+}
+
+
+
+.form input, textarea {
+    box-sizing:border-box;
+    height:50px;
+    background-color: #000;  
+    border:0;
+    padding: 10px;      
+    margin: 0 0 2px 0;
+    background-color: #000;
+    color: #fff;
+    font-size: larger;
+}
+
+.form input {
+    width: 350px;
+}
+.form input[type="date"] {
+    width: 150px;
+}
+
+.form input:focus {
+    //color: #000;    
+    //background-color: #fff;
+}
+
+
+.form input:disabled { 
+    background-color: #666;
+}
+
+
+button.button{ 
+    height:50px;
+    width: 350px;
+    background: red;
+    color: #fff;    
+    margin: -70px 10px 10px 10px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0;
+    border: 0;
+    float: right;
+}
+
+button.button:hover { 
+    background-color: #0B0B0B;
+}
+
+.upload-button{ 
+    height:50px;
+    width: 350px;
+    background: red;
+    color: #fff;    
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0;
+    border: 0;   
+    margin-top: 15px;
+    margin-left: 5px;
+}
+
+fieldset#foto {
+    width: 1000px;
+    margin-bottom: 100px;
+}
+fieldset#foto > i {
+    margin-left: 10px;  
+    color: #ffffbf;
+}
+
+div.upload {
+    display: inline-block;
+    box-sizing:border-box;
+    background-color: #271604;    
+    margin: 0 25px 15px 0;
+    color: #fff;
+    font-size: smaller;
+}
+
+div.upload img {
+    border: 5px solid #271604;
+}
+
+div#error {
+    float: left;
+    color: red;
+    font-size: larger;
+}
+
+.error, #error
+{
+    color: red;
+}

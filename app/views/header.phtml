@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>test.kuz.mobi - <?php if (!empty($title)) echo $title ?> </title>
+        <meta content="IE=edge" http-equiv="X-UA-Compatible" />       
+
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
+        <link rel="stylesheet" href="/css/uploadify.css" />
+        <link rel="stylesheet" href="/css/main.css" />
+
+        <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script> 
+
+        <!--[if lte IE 9]>        
+        <link href="/css/ie8.css" rel="stylesheet" type="text/css" />
+        <script src="/js/ie8.js"></script>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>        
+        <![endif]-->
+    </head>
+
+    <body>
+        <header>
+            <a href="/"><div id="logo"></div></a>
+            <h1>
+                <?php if (!empty($title)) echo $title ?>                   
+            </h1>
+
+            <nav>
+                <?php if (empty($page) || $page != 'main'): ?>
+                    <a href="/">Главная страница</a>
+                <?php endif; ?>
+
+                <?php if (!empty($page) && $page != 'registration'): ?>
+                    <a href="/registration">Регистрация</a>
+                <?php endif; ?>
+
+                <?php if (!empty($page) && $page != 'about'): ?>
+                    <a href="/index/about">О сайте</a>
+                <?php endif; ?>
+
+                <?php if (!empty($page) && $page != 'contact'): ?>
+                    <a href="/index/contact">Контакты</a>
+                <?php endif; ?>
+            </nav>
+        </header>

@@ -1,0 +1,10 @@
+Options -Indexes
+RewriteEngine On
+
+#add trailing slash to the end of url
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)([^/])$ /$1$2/ [L,R=301]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,PT,L]

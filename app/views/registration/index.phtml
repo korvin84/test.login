@@ -1,0 +1,62 @@
+<main>
+    <article>
+        <div class="form"> 
+            <form id="register_form" method="post"> 
+                <fieldset>
+                    <legend title="Фамилия, имя и отчество. 2-50 символов">Ф.И.О*</legend>                
+                    <input id="sname" name="sname" type="text" placeholder="Фамилия" required />       
+                    <input id="fname" name="fname" type="text" placeholder="Имя" required />      
+                    <input id="pname" name="pname" type="text" placeholder="Отчество" required />
+                </fieldset>
+
+                <fieldset>
+                    <legend>Место проживания*</legend>                
+                    <input id="country" name="country" type="text" placeholder="Страна" required />       
+                    <input id="region" name="region" type="text" placeholder="Регион" required />      
+                    <input id="city" name="city" type="text" placeholder="Город" required />
+                </fieldset>
+
+                <p class="clr"></p>
+
+                <fieldset>                               
+                    <label for="email">E-mail* </label>
+                    <input id="email" name="email" type="email" placeholder="name@example.com" required />     
+
+                    <label for="tel">Телефон: </label>
+                    <input id="tel" name="tel" type="tel" placeholder="+1-234-567-89-10" required pattern="(\+?\d[- .]*){7,13}"/>                       
+                </fieldset>
+
+                <fieldset>                                  
+                    <label for="dob">Дата рождения* </label>
+                    <input id="dob" name="dob" type="text" placeholder="ДД-ММ-ГГГГ" required />     
+
+                    <label for="nick" title="Латинские символы и цифры. 5-50 символов. Первый символ - не цифра.">Выберите ник* </label>
+                    <input id="nick" name="nick" type="text" placeholder="Ник" required />                                       
+                </fieldset>
+
+                <p class="clr"></p>
+
+                <fieldset id="foto">
+                    <legend>Фото*</legend>
+                    <i>Загрузите 1-5 фотографий размером не более 1.5 Мб в формате 
+                        jpg/jpeg, png или gif. Выберите главное фото.</i>                      
+                    <!--input name="foto" id="file-field" type="file" multiple="true" min="1" accept="image/*" required>
+                    <a href="#" class="submit button">Загрузить файлы</a>
+                    <div class="ajax-respond"></div-->
+
+                    <div id="queue"></div>                    
+                    <input id="files" type="file" multiple accept="image/*" required>
+                    <div id="error"></div>
+                    <div id="avatar"></div>
+
+                </fieldset>
+
+                <p class="clr"></p>
+
+                <button class="button" id="register_button">Продолжить</button>              
+
+            </form>
+        </div>
+
+    </article>
+</main>

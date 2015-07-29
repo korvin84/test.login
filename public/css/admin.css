@@ -1,0 +1,27 @@
+#logo {    
+    background: url("/images/logo-blue.png") 5px center no-repeat;    
+}
+
+table {
+    width: 50%;
+    border-spacing: 5px;
+    border-collapse: collapse;
+}
+td {
+    padding: 5px;
+    border: 1px white solid;
+}
+
+td.avatar {
+    width: 110px;
+}
+
+tr.fotos {
+    height: 110px;
+    border-bottom: 5px solid white;
+}
+
+td.title {
+    width: 25%;
+    font-weight: bold;
+}
